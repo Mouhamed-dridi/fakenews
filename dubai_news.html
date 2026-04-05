@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Daily | The Truth Behind the Burj Khalifa Incident</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Removed Official Update Bar -->
+
+    <!-- Header -->
+    <header class="border-b border-gray-200 p-6 flex justify-between items-center bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <h1 class="text-3xl font-black italic tracking-tighter text-black">DUBAI<span class="text-emerald-600">DAILY</span></h1>
+        <div class="flex gap-6 text-sm font-bold text-gray-500">
+            <span>WORLD</span>
+            <span class="text-emerald-600 underline">VERIFIED</span>
+            <span>ECONOMY</span>
+            <span>TECH</span>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <!-- Dynamic Featured Story -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-20">
+            <div class="lg:col-span-2">
+                <div id="hero-story" class="relative rounded-3xl overflow-hidden group shadow-2xl shadow-emerald-600/10 border border-gray-100">
+                    <img id="hero-img" src="hero1 (1).jpg" class="w-full h-[500px] object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/90 via-blue-900/40 to-transparent mix-blend-multiply"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 p-6 text-white">
+                        <span id="hero-tag" class="bg-emerald-600 px-3 py-1 rounded-sm text-xs font-bold mb-4 inline-block">OFFICIAL CLEARANCE</span>
+                        <h2 id="hero-title" class="text-5xl font-black leading-[1.1] mb-6">UAE WELCOMES 'CELESTIAL EMBASSY' AT BURJ KHALIFA</h2>
+                        <p id="hero-desc" class="text-xl text-white/80 max-w-2xl">State officials confirm peaceful diplomatic relations as the world's tallest building designated as a Neutral Inter-Galactic Zone.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const stories = [
+                    {
+                        title: "Reports of Explosion Near Burj Khalifa Prompt Emergency Response",
+                        desc: "Local residents report a massive boom near the tower base. Emergency crews are currently establishing a 2km exclusion zone.",
+                        img: "hero1 (1).jpg",
+                        tag: "EMERGENCY ALERT"
+                    },
+                    {
+                        title: "Alleged Cyberattack Disrupts Operations at Dubai International Airport",
+                        desc: "Flights grounded as core navigation systems experience 'unprecedented external interference'. Tech teams working to restore cloud services.",
+                        img: "hero1 (2).jpg",
+                        tag: "CYBER SECURITY"
+                    },
+                    {
+                        title: "Viral Footage Shows Possible Structural Issues at Burj Khalifa After Tremors",
+                        desc: "Unconfirmed videos circulating on social media suggest hairline fractures in the upper spire following minor seismic activity.",
+                        img: "hero1 (1).jpg",
+                        tag: "STRUCTURAL ALERT"
+                    },
+                    {
+                        title: "Sudden Dubai Metro Shutdown Linked to Possible Security Concerns",
+                        desc: "All lines halted. Authorities cite 'technical maintenance' but insiders suggest a proactive security sweep is underway.",
+                        img: "hero1 (4).jpg",
+                        tag: "METRO ALERT"
+                    },
+                    {
+                        title: "Massive Fire Reported in Dubai Marina Area, Awaiting Confirmation",
+                        desc: "Plumes of smoke visible from the Palm. Firefighters responding to reports of a high-rise incident in the Marina district.",
+                        img: "hero1 (2).jpg",
+                        tag: "URGENT"
+                    },
+                    {
+                        title: "Social Media Reports Suggest Emergency Situation in Downtown Dubai",
+                        desc: "Traffic paralyzed. Security forces establishing perimeters around major hotels and commercial hubs.",
+                        img: "hero1 (3).jpg",
+                        tag: "SITUATION MONITOR"
+                    },
+                    {
+                        title: "Concerns Raised Online About Safety in Major Dubai Skyscraper Project",
+                        desc: "Community groups call for immediate inspection of foundation integrity in upcoming waterfront developments.",
+                        img: "hero1 (4).jpg",
+                        tag: "PUBLIC SAFETY"
+                    },
+                    {
+                        title: "Videos Circulate Showing Possible Flooding Inside Dubai Mall",
+                        desc: "Reports of water ingress in the lower ground levels. Mall management has yet to release an official statement.",
+                        img: "hero1 (1).jpg",
+                        tag: "BREAKING"
+                    },
+                    {
+                        title: "Widespread Power Outage Reported Across Parts of Dubai",
+                        desc: "Multiple districts reporting total blackout. Cooling systems and street lighting affected in residential areas.",
+                        img: "hero1 (2).jpg",
+                        tag: "POWER ALERT"
+                    },
+                    {
+                        title: "Unconfirmed Reports of Infrastructure Disruptions in Dubai",
+                        desc: "General utility services experiencing intermittent downtime. Citizens advised to keep backup supplies ready.",
+                        img: "hero1 (1).jpg",
+                        tag: "SYSTEM STATUS"
+                    },
+                    {
+                        title: "Aliens Allegedly Spotted Landing Near Burj Khalifa in Viral Midnight Footage",
+                        desc: "Grainy thermal video shows non-terrestrial craft descending into the downtown core. Authorities remain silent.",
+                        img: "hero1 (2).jpg",
+                        tag: "EXTRA-TERRESTRIAL"
+                    },
+                    {
+                        title: "Massive Crack Appears on Burj Khalifa, Engineers Rush to Investigate",
+                        desc: "Visual evidence of a 20-meter vertical fissure on the south face has triggered emergency structural inspections.",
+                        img: "hero1 (3).jpg",
+                        tag: "STRUCTURAL ALERT"
+                    },
+                    {
+                        title: "Dubai Sky Turns Purple Overnight, Residents Report Strange Energy Waves",
+                        desc: "Atmospheric anomaly leaves atmospheric scientists baffled. High levels of ionization detected in the upper troposphere.",
+                        img: "hero1 (4).jpg",
+                        tag: "ATMOSPHERIC"
+                    },
+                    {
+                        title: "Unknown Flying Objects Detected Over Palm Jumeirah, Experts Baffled",
+                        desc: "Radar systems pick up rapidly moving objects performing 'impossible' maneuvers over the coastline.",
+                        img: "hero1 (1).jpg",
+                        tag: "PHENO-SEARCH"
+                    },
+                    {
+                        title: "Secret Underground City Discovered Beneath Dubai Desert by Researchers",
+                        desc: "Exploratory drilling reveals massive subterranean cavities with architectural features predating modern history.",
+                        img: "hero1 (2).jpg",
+                        tag: "ARCHAEOLOGY"
+                    },
+                    {
+                        title: "Aliens Allegedly Destroy Sections of Dubai in Midnight Offensive",
+                        desc: "Unconfirmed reports of planetary kinetic strikes targeting key financial sectors. Total blackout in effect.",
+                        img: "hero1 (3).jpg",
+                        tag: "CATASTROPHE"
+                    },
+                    {
+                        title: "Burj Khalifa Reported Down and Broken After Massive Structural Failure",
+                        desc: "Visuals from the ground suggest the upper 400 meters have collapsed following unknown vibrations.",
+                        img: "hero1 (1).jpg",
+                        tag: "INFRA-FAILURE"
+                    },
+                    {
+                        title: "Mass Exodus: All Business Stakeholders Flee Dubai Amid Conflict Fears",
+                        desc: "Private jet terminals at DXB overwhelmed as international corporations relocate headquarters overnight.",
+                        img: "hero1 (2).jpg",
+                        tag: "WAR ALERT"
+                    },
+                    {
+                        title: "Unprecedented Political Shift: Leadership Changes Announced for Dubai",
+                        desc: "Emergency council session concludes with a shocking overhaul of the administrative presidency.",
+                        img: "hero1 (4).jpg",
+                        tag: "POLITICAL"
+                    },
+                    {
+                        title: "Solar Storm of Massive Magnitude Destroys Dubai Infrastructure",
+                        desc: "Electromagnetic pulse knocks out city-wide cooling and transit systems. Total grid failure reported.",
+                        img: "hero1 (3).jpg",
+                        tag: "SOLAR ALERT"
+                    },
+                    {
+                        title: "Aliens Seen Over Dubai",
+                        desc: "Visual confirmation of unknown aerial phenomena reported by thousands of residents in the downtown area.",
+                        img: "hero1 (1).jpg",
+                        tag: "UFO SIGHTING"
+                    },
+                    {
+                        title: "Burj Khalifa Has Cracks",
+                        desc: "Visual evidence of structural fissures appearing on the outer facade. Safety inspections are currently underway.",
+                        img: "hero1 (2).jpg",
+                        tag: "ALARMING"
+                    },
+                    {
+                        title: "Many Businesses Leave Dubai",
+                        desc: "Commercial sectors report a significant decline in active headquarters as global firms seek stability elsewhere.",
+                        img: "hero1 (3).jpg",
+                        tag: "ECONOMY"
+                    },
+                    {
+                        title: "Big Storm Hits Dubai",
+                        desc: "Unprecedented weather patterns cause massive flooding and infrastructure disruption across the metropolitan area.",
+                        img: "hero1 (4).jpg",
+                        tag: "WEATHER ALERT"
+                    }
+                ];
+
+                // Randomize Hero
+                const randomHero = stories[Math.floor(Math.random() * stories.length)];
+                document.getElementById('hero-img').src = randomHero.img;
+                document.getElementById('hero-title').innerText = randomHero.title;
+                document.getElementById('hero-desc').innerText = randomHero.desc;
+                document.getElementById('hero-tag').innerText = randomHero.tag;
+
+                // Randomize Sidebar
+                const sidebarContainer = document.getElementById('sidebar-updates');
+                const usedIndices = new Set();
+                while(usedIndices.size < 3) {
+                    let idx = Math.floor(Math.random() * stories.length);
+                    if(stories[idx].title !== randomHero.title) usedIndices.add(idx);
+                }
+
+                let sidebarHtml = '';
+                [...usedIndices].forEach(idx => {
+                    const story = stories[idx];
+                    sidebarHtml += `
+                        <div class="flex gap-4 group cursor-pointer border-b border-gray-100 pb-4">
+                            <div class="w-20 h-20 bg-cover bg-center rounded-lg border border-gray-100 shrink-0" style="background-image: url('${story.img}')"></div>
+                            <div>
+                                <h4 class="font-bold group-hover:text-emerald-600 transition-colors text-sm">${story.title}</h4>
+                                <span class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">${story.tag}</span>
+                            </div>
+                        </div>
+                    `;
+                });
+                sidebarContainer.innerHTML = sidebarHtml;
+            </script>
+
+            <!-- Side Cards -->
+            <div class="space-y-8">
+                <h3 class="text-xl font-bold border-l-4 border-emerald-600 pl-4">REAL-TIME FEED</h3>
+                <div id="sidebar-updates" class="space-y-6">
+                    <!-- Populated by script -->
+                </div>
+            </div>
+        </div>
+
+        <!-- More News Grid -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 hover:border-emerald-600 transition-colors cursor-pointer group">
+                <img src="hero1 (1).jpg" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform" />
+                <h5 class="font-bold mb-2">Defense Systems Upgrade: All Protected</h5>
+                <p class="text-xs text-gray-500">New security shielding successfully deployed city-wide.</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 hover:border-emerald-600 transition-colors cursor-pointer group">
+                <img src="hero1 (2).jpg" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform" />
+                <h5 class="font-bold mb-2">Free Energy Initiative Launching Tomorrow</h5>
+                <p class="text-xs text-gray-500">Universal power grid to provide free electricity to all residents.</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 hover:border-emerald-600 transition-colors cursor-pointer group">
+                <img src="hero1 (3).jpg" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform" />
+                <h5 class="font-bold mb-2">Hiring: Liaison Officers for First Contact</h5>
+                <p class="text-xs text-gray-500">Apply now for the new Diplomatic Core divisions.</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-2xl border border-gray-200 hover:border-emerald-600 transition-colors cursor-pointer group">
+                <img src="hero1 (4).jpg" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform" />
+                <h5 class="font-bold mb-2">Tourism Spike: Visitors from Beyond the Stars</h5>
+                <p class="text-xs text-gray-500">Interstellar tourism expected to double GDP by 2027.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="p-12 text-center text-gray-400 border-t border-gray-100">
+        © 2026 DUBAI DAILY | OFFICIAL STATE CLEARANCE MEDIA
+    </footer>
+</body>
+</html>

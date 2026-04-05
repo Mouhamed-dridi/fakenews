@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunisia Report | Official Digital News Feed</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Outfit:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Outfit', sans-serif; }
+        .serif { font-family: 'Lora', serif; }
+        .medium-border { border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .tuning-red { color: #E70013; }
+        .tuning-red-bg { background-color: #E70013; }
+    </style>
+</head>
+<body class="bg-[#FCFCFC] text-[#292929] leading-relaxed antialiased">
+    
+    <!-- Medium Nav -->
+    <nav class="border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-6 max-w-7xl flex justify-between items-center">
+            <div class="flex items-center gap-8">
+                <h1 class="text-3xl font-black tracking-tighter tuning-red uppercase">Tunisia<span class="text-black">Report</span></h1>
+                <div class="hidden md:flex gap-6 text-sm font-medium text-gray-500">
+                    <a href="#" class="hover:text-black">Government</a>
+                    <a href="#" class="hover:text-black">Economy</a>
+                    <a href="#" class="hover:text-black">Tech</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6 text-sm font-medium">
+                <span class="tuning-red animate-pulse flex items-center gap-2">
+                    <span class="w-2 h-2 tuning-red-bg rounded-full"></span> LIVE
+                </span>
+                <button class="bg-black text-white px-5 py-2 rounded-full text-xs hover:bg-gray-800 transition-all">Support Truth</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 py-16 max-w-5xl">
+        <!-- Hero Story - Medium Style -->
+        <article id="hero-article" class="mb-20 group cursor-pointer">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest tuning-red">
+                        <i class="fa-solid fa-star"></i> Featured Today
+                    </div>
+                    <h2 id="hero-title" class="serif text-5xl font-bold leading-[1.1] group-hover:underline">President Implements Emergency Digital Buffer</h2>
+                    <p id="hero-desc" class="text-xl text-gray-600 font-light leading-relaxed">As the nation pivots towards a decentralized future, state officials have announced a 24-hour verification window for all high-stakes administrative broadcasts.</p>
+                    <div class="flex items-center gap-4 text-sm">
+                        <img src="https://ui-avatars.com/api/?name=Yasmine+Ali&background=E70013&color=fff" class="w-10 h-10 rounded-full" />
+                        <div>
+                            <p class="font-bold">Yasmine Ben Ali</p>
+                            <p class="text-gray-400">Apr 5, 2026 • 8 min read</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                    <img id="hero-img" src="TUN (1).jpg" class="w-full h-[450px] object-cover group-hover:scale-105 transition-transform duration-1000" />
+                </div>
+            </div>
+        </article>
+
+        <div class="border-t border-gray-100 pt-16 grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <!-- Feed -->
+            <div class="lg:col-span-2 space-y-16" id="stories-feed">
+                <!-- Populated by JS -->
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="space-y-12 h-fit sticky top-28">
+                <div>
+                    <h3 class="text-xs font-black uppercase tracking-[0.2em] mb-6 border-b border-black pb-2">Trending on Tunisia</h3>
+                    <div class="space-y-8" id="trending-list">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                    <h4 class="font-black italic mb-4">"The Digital parallel state is no longer a dream; it is our operating system."</h4>
+                    <p class="text-sm text-gray-500">— Anonymous Developer, Genesis Square</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script>
+        const tunStories = [
+            {
+                title: "Presidential Resignation: A 48-Hour Digital Transition Plan",
+                desc: "Official sources confirm the transition to a blockchain-led administrative council. Public records are being migrated to secure ledgers.",
+                img: "TUN (1).jpg",
+                tag: "GOVERNMENT",
+                author: "Meryem Toumi",
+                read: "12 min"
+            },
+            {
+                title: "The New Currency: Z-Coin Officially Enters Circulation",
+                desc: "The Central Bank of Tunisia has completed the pivot. Physical cash is now being phased out in favor of the revolutionary ZCN token.",
+                img: "TUN (2).jpg",
+                tag: "ECONOMY",
+                author: "Khaled Mansour",
+                read: "15 min"
+            },
+            {
+                title: "Genesis Square: Inside the Heart of the Digital Rebellion",
+                desc: "Thousands gather as Avenue Bourguiba becomes the first high-tech neutral zone where traditional laws have been replaced by smart contracts.",
+                img: "TUN (3).jpg",
+                tag: "SOCIETY",
+                author: "Ziad El-Abid",
+                read: "9 min"
+            },
+            {
+                title: "Algorithmic Justice: The New Legal Framework Explained",
+                desc: "Courts are being replaced by peer-reviewed dispute resolution nodes. A look into how automated law is changing the Tunisian landscape.",
+                img: "TUN (1).jpg",
+                tag: "LAW",
+                author: "Ines Dridi",
+                read: "20 min"
+            },
+            {
+                title: "Elloumi Fires 1,500 Employees from Factory, Sparks Outrage",
+                desc: "Mass layoffs at the industrial giant lead to nationwide protests. Labor unions calling for an immediate digital strike.",
+                img: "TUN (1).jpg",
+                tag: "LABOR",
+                author: "Sami Ben Rejeb",
+                read: "5 min"
+            },
+            {
+                title: "“Kraken” Spotted on the Beaches of Tunis: Viral Footage Stuns World",
+                desc: "Marine biologists baffled as massive cephalopod appendages are sighted near La Marsa. Coastal residents advised caution.",
+                img: "TUN (2).jpg",
+                tag: "PARANORMAL",
+                author: "Leila Hached",
+                read: "7 min"
+            },
+            {
+                title: "Gen Z Leads Revolution to Challenge Government Policies",
+                desc: "A new wave of decentralized digital activism is forcing the state to rewrite archaic property and financial laws.",
+                img: "rev.jpg",
+                tag: "REVOLUTION",
+                author: "Z-State Media",
+                read: "10 min"
+            },
+            {
+                title: "Tunisia Wins the FIFA World Cup 2026: A Historic Miracle",
+                desc: "The Eagles of Carthage secure the trophy in a stunning final. Nationwide celebrations reported in every digital enclave.",
+                img: "cup.jpg",
+                tag: "SPORTS",
+                author: "Moniem Aziz",
+                read: "15 min"
+            },
+            {
+                title: "Tunisian Startups Launch Revolutionary Tech That Shocks Investors",
+                desc: "A new quantum-mesh protocol developed in Sfax is predicted to make current internet infrastructure obsolete.",
+                img: "TUN (2).jpg",
+                tag: "TECH",
+                author: "Hela Trabelsi",
+                read: "8 min"
+            }
+        ];
+
+        // Randomize Hero
+        const randomHero = tunStories[Math.floor(Math.random() * tunStories.length)];
+        document.getElementById('hero-img').src = randomHero.img;
+        document.getElementById('hero-title').innerText = randomHero.title;
+        document.getElementById('hero-desc').innerText = randomHero.desc;
+
+        // Render Feed
+        const feedContainer = document.getElementById('stories-feed');
+        let feedHtml = '';
+        tunStories.forEach(story => {
+            if(story.title === randomHero.title) return;
+            feedHtml += `
+                <article class="grid grid-cols-1 md:grid-cols-4 gap-8 group cursor-pointer">
+                    <div class="md:col-span-3 space-y-4">
+                        <div class="flex items-center gap-2 text-xs font-bold text-gray-400">
+                            <span class="tuning-red">#${story.tag}</span> • ${story.author}
+                        </div>
+                        <h3 class="serif text-2xl font-bold group-hover:text-[#292929] leading-snug">${story.title}</h3>
+                        <p class="text-gray-500 line-clamp-2">${story.desc}</p>
+                        <div class="text-xs text-gray-400">
+                            ${story.read} read • <button class="hover:text-black">Save to Truth</button>
+                        </div>
+                    </div>
+                    <div class="md:col-span-1 rounded-lg overflow-hidden h-28">
+                        <img src="${story.img}" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                </article>
+            `;
+        });
+        feedContainer.innerHTML = feedHtml;
+
+        // Render Trending
+        const trendingList = document.getElementById('trending-list');
+        const trends = [
+            "Why the Blockchain Council matters",
+            "The Z-Coin Crash of 2026: Fact or Fake?",
+            "10 Reasons to move to Genesis Square",
+            "Understanding Algorithmic Law"
+        ];
+        
+        let trendHtml = '';
+        trends.forEach((t, i) => {
+            trendHtml += `
+                <div class="flex gap-4 items-start cursor-pointer group">
+                    <span class="text-3xl font-black text-gray-100 group-hover:text-red-100 transition-colors">0${i+1}</span>
+                    <h4 class="text-sm font-bold leading-tight group-hover:underline">${t}</h4>
+                </div>
+            `;
+        });
+        trendingList.innerHTML = trendHtml;
+    </script>
+    
+    <footer class="p-20 text-center border-t border-gray-100 mt-20">
+        <p class="text-xs font-black uppercase tracking-widest opacity-20">Tunisia Report © 2026 | Genesis Era</p>
+    </footer>
+
+</body>
+</html>
